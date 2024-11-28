@@ -44,3 +44,7 @@ Thumbs.db
 # O puedes agregar una ruta específica si solo quieres ignorar esos archivos
 public/browser/assets/Navidad/13Video.MOV
 public/browser/assets/Galeria/5Video.mp4
+
+# Ignorar todos los archivos de video
+*.mp4
+*.MOV
