@@ -1,0 +1,109 @@
+/* Estilo general del footer */
+.footer {
+  background-color: #20033B;
+  color: #6CB7B0;
+  display: flex;
+  justify-content: space-between; /* Distribuye las columnas con espacio entre ellas */
+  align-items: center; /* Alinea verticalmente al centro */
+  padding: 40px;
+  flex-wrap: wrap;
+  font-size: 12vh; /* Mantener el tamaño de fuente del texto circundante */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Heredar la tipografía */
+  text-align: left; /* Para alinear el contenido a la izquierda */
+}
+
+/* Logo */
+.footer-logo {
+  flex-basis: 33%; /* El logo ocupará un tercio del espacio */
+  display: flex; /* Usamos flex para que el logo y el texto estén alineados */
+  flex-direction: column; /* Mantén el logo y el texto en columna */
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Centra el texto del logo */
+}
+
+.footer-logo img {
+  width: 40vh; /* Tamaño del logo */
+}
+
+.footer-logo p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  text-align: center; /* Alineación centrada */
+}
+
+.certifications img {
+  width: 60px; /* Ajusta el tamaño de las imágenes de certificación */
+  margin: 10px;
+}
+
+/* Sección de columnas */
+.footer-sections {
+  display: flex;
+  justify-content: space-around; /* Espacio alrededor de las columnas */
+  flex-grow: 1;
+  flex-basis: 66%; /* El resto del espacio lo ocupan las columnas */
+  text-align: left;
+}
+
+.footer-column {
+  margin: 0 20px;
+  min-width: 200px; /* Evitar que las columnas sean demasiado pequeñas */
+}
+
+.footer-column h3 {
+  color: #8e2397; /* Color de los títulos */
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .footer {
+      flex-direction: column; /* Las columnas se apilan en pantallas pequeñas */
+      align-items: center;
+      text-align: center;
+  }
+
+  .footer-sections {
+      flex-direction: column;
+      margin-left: 0;
+  }
+
+  .footer-column {
+      margin-bottom: 30px;
+      text-align: center; /* Centra el texto en pantallas pequeñas */
+  }
+
+  .footer-logo {
+      margin-bottom: 20px; /* Asegura que haya espacio entre el logo y el resto */
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer-sections {
+      max-width: 100%; /* En pantallas medianas se permite ocupar todo el ancho */
+  }
+}
+
+/*Enlaces*/
+.link-button {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  color: #6CB7B0; /* Mismo color que el enlace */
+  cursor: pointer; /* Cambiar el cursor a mano */
+  font-size: 1.5vh; /* Mantener el tamaño de fuente del texto circundante */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Heredar la tipografía */
+  padding: 0; /* Sin relleno */
+  text-decoration: underline;
+}

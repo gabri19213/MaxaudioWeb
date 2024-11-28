@@ -1,0 +1,70 @@
+.privacy-policy-container {
+  max-width: 800px;
+  margin: 0 auto; /* Centrar contenido */
+  padding: 20px;
+  background-color: #121212; /* Fondo oscuro */
+  color: #e0e0e0; /* Texto claro */
+  font-family: 'Arial', sans-serif; /* Fuente profesional */
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+}
+
+.privacy-policy-container h1 {
+  font-size: 2rem;
+  color: #6cb7b0; /* Color principal */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.privacy-policy-container h2 {
+  font-size: 1.5rem;
+  color: #8e2397; /* Color secundario */
+  margin-top: 20px;
+  border-bottom: 2px solid #6cb7b0; /* Línea decorativa */
+  padding-bottom: 5px;
+}
+
+.privacy-policy-container p {
+  font-size: 1rem;
+  line-height: 1.6; /* Mejor legibilidad */
+  margin-bottom: 15px;
+}
+
+.privacy-policy-container ul {
+  margin: 10px 0 10px 20px;
+  padding-left: 20px;
+}
+
+.privacy-policy-container ul li {
+  list-style-type: disc;
+  margin-bottom: 10px;
+}
+
+.privacy-policy-container strong {
+  color: #ffffff; /* Resaltar texto */
+}
+
+@media (max-width: 768px) {
+  .privacy-policy-container {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  .privacy-policy-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .privacy-policy-container h2 {
+    font-size: 1.2rem;
+  }
+}
+
+
+/*Cabecera*/
+.contact-img {
+  width: 100%;
+  height: 25vh;
+  object-fit: scale-down;
+  display: block;
+  margin: 0;
+}

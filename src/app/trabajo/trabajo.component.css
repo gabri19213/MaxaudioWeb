@@ -1,0 +1,471 @@
+/* Imagen con superposición de texto */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.trabajo-img {
+  width: 100%;
+  height: 55vh; /* Mantener el valor de altura que ya tienes */
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.overlay-text h1 {
+  font-size: 3.5rem;
+  display: inline;
+  color: #ffffff;
+  background: linear-gradient(to right, black, #8e2397, black); /* Degradado */
+  font-style: italic;
+}
+
+.overlay-text-2 h2 {
+  font-size: 2rem;
+  display: inline;
+  margin: 0;
+  color: #6cb7b0;
+}
+.estructura-section {
+  padding: 0; /* Eliminar padding si existe */
+  margin: 0; /* Eliminar márgenes si existe */
+  background-color: #ffffff; /* Fondo negro */
+  text-align: center;
+}
+.contact-img {
+  width: 100%; /* Ocupará todo el ancho */
+  height: 55vh; /* Ajusta este valor según tus necesidades */
+  object-fit: cover; /* Asegura que la imagen se recorte y se ajuste bien al contenedor */
+  display: block; /* Elimina el espacio en la parte inferior */
+  margin: 0; /* Eliminar márgenes */
+}
+
+/* Sección Equipos de Sonido en Madrid */
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 7vh;
+  margin-bottom: 7vh;
+  margin-left: 7vh;
+  margin-right: 7vh;
+}
+
+.text-content {
+  width: 50%;
+  padding-right: 20px;
+}
+
+.text-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: rgba(142, 35, 151, 255);
+}
+
+.text-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #6cb7b0;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.text-content p strong {
+  font-weight: bold;
+}
+
+.cta-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #cc0000;
+}
+
+.image-content {
+  width: 45%;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .text-content,
+  .image-content {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .cta-button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/*Imagen con texto*/
+.background-image-section {
+  background-image: url("/assets/Escenario/13.JPG"); /* Cambia esta ruta a la imagen que quieras usar */
+  background-size: cover;
+  background-position: center;
+  height: 45vh; /* Ajusta la altura según tus necesidades */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.background-image-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fondo oscuro para mejorar legibilidad */
+  z-index: 1;
+}
+
+.overlay-text-2 {
+  position: relative;
+  z-index: 2; /* Elevar el texto sobre el fondo */
+  padding: 20px;
+  max-width: 800px;
+  border-radius: 10px;
+}
+
+.overlay-text-2 h2,
+.overlay-text h3 {
+  margin-bottom: 20px;
+}
+
+.overlay-text-2 p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .background-image-section {
+    height: 50vh; /* Reduce la altura en pantallas pequeñas */
+  }
+
+  .overlay-text-2 h2 {
+    font-size: 1.8rem;
+  }
+
+  .overlay-text-2 h3 {
+    font-size: 1.2rem;
+  }
+
+  .overlay-text-2 p {
+    font-size: 1rem;
+  }
+}
+
+/* Estilos para la galería */
+.image-gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 11%;
+  margin-right: 11%;
+  max-width: 1200px;
+}
+
+.image-card {
+  position: relative;
+  flex: 1 1 23%; /* Cada tarjeta ocupa el 23% del contenedor y se ajusta */
+  height: 70vh; /* Altura fija para todas las tarjetas */
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que la imagen se ajuste al contenedor sin deformarse */
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Estilos para la superposición del telón */
+.image-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Color gris oscuro con transparencia */
+  display: flex;
+  flex-direction: column; /* Permite colocar los elementos en columna */
+  color: white;
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.5s ease;
+}
+
+/* Texto dentro de la superposición */
+.image-card .overlay h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 25vh;
+}
+.image-card .overlay p {
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Efecto hover */
+.image-card:hover .overlay {
+  opacity: 1; /* El telón se muestra al hacer hover */
+}
+
+.image-card:hover img {
+  transform: scale(1.1); /* Zoom leve en la imagen al hacer hover */
+}
+
+/* Responsivo para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .image-card {
+    flex: 1 1 48%; /* Ocupa el 48% en pantallas medianas */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-card {
+    flex: 1 1 100%; /* En pantallas pequeñas, ocupa el 100% del ancho */
+  }
+}
+
+.service-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.service-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #8e2397;
+}
+
+.service-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  width: 23%;
+  background: linear-gradient(to top, #000 35%, #fff 65%);
+  box-shadow: 2px 10px 20px #6cb7b0;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.service-card img {
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  height: 200px; /* Altura fija para mantener uniformidad */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Opcional: para bordes redondeados */
+}
+.service-card img.vertical {
+  object-fit: contain; /* Evita recortes y adapta la imagen */
+  background-color: #e6e6e6; /* Fondo para que no queden huecos vacíos */
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  padding: 15px;
+  color: #6cb7b0;
+}
+
+.service-card p {
+  padding: 0 15px 20px 15px;
+  font-size: 1rem;
+  color: #ffffff;
+}
+
+.service-card button {
+  margin: 0 15px 15px 15px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.service-card button:hover {
+  background-color: #333;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+  }
+}
+
+/*GALERIA*/
+/*GALERIA*/
+.galery-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.galery-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #8e2397;
+  font-style: italic;
+}
+
+.galery-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.galery-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.galery-card {
+  width: 25%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.galery-card img {
+  width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+  height: 100%; /* Asegura que ocupe toda la altura del contenedor */
+  object-fit: contain; /* Para todas las imágenes, usar 'contain' */
+  border-radius: 8px; /* Opcional: para bordes redondeados */
+}
+
+/* Estilo para las imágenes horizontales */
+.galery-card img.horizontal {
+  object-fit: cover; /* Para imágenes horizontales, las ajustamos para cubrir el contenedor */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .galery-card {
+    width: 100%; /* Ajusta las cartas a tamaño completo en pantallas pequeñas */
+  }
+}
+
+
+/*VIDEO*/
+/* Estilos para la sección de videos */
+.video-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.video-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #8e2397;
+  font-style: italic;
+}
+
+.video-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.video-card {
+  width: 45%; /* Tamaño de las tarjetas */
+  background-color: #6cb7b0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #8e2397;
+  overflow: hidden;
+}
+
+.video-card video {
+  width: 100%; /* Asegura que el video ocupe todo el contenedor */
+  height: 450px; /* Altura fija para los videos */
+  object-fit: cover; /* Ajuste de la imagen del video */
+  border-radius: 10px;
+}
+
+.video-card h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #8e2397;
+}
+
+.video-card p {
+  padding: 10px;
+  font-size: 1rem;
+  color: #777;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .video-card {
+    width: 100%; /* Las tarjetas ocupan todo el ancho en pantallas pequeñas */
+  }
+
+  .video-card video {
+    height: 200px; /* Ajusta la altura del video en pantallas más pequeñas */
+  }
+}

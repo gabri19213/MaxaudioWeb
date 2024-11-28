@@ -1,0 +1,347 @@
+/* Estilos generales para el carrusel */
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Ajusta la altura según prefieras */
+  overflow: hidden;
+}
+
+/* Asegurarse de que cada slide ocupe todo el contenedor */
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Cuando el slide está activo */
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Imagen de cada slide */
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen se ajuste al contenedor */
+}
+
+/* Texto superpuesto en las imágenes */
+.carousel-text {
+  position: absolute;
+  bottom: 10%;
+  align-items: center;
+  color: #fff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* Títulos */
+.carousel-text h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+/* Subtítulos */
+.carousel-text p {
+  font-size: 1.5rem;
+  margin: 10px 0 0 0;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .carousel-text h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .carousel-text p {
+    font-size: 0.9rem;
+  }
+}
+/* Estilos para la sección "Soluciones Audiovisuales" */
+.solutions {
+  background-color: #004d40; /* Fondo verde oscuro */
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.solutions-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.solutions h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.solutions p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .solutions h2 {
+    font-size: 2rem;
+  }
+
+  .solutions p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .solutions h2 {
+    font-size: 1.5rem;
+  }
+
+  .solutions p {
+    font-size: 0.9rem;
+  }
+}
+/* Estilos para la sección de Sonido e Iluminación */
+.services-carousel {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.services-carousel h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.services-carousel p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Slider de servicios */
+/* Sección de servicios */
+.service-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.service-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.service-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.service-card {
+  width: 23%;
+  background: linear-gradient(to bottom, #000 55%, #fff 65%);
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  padding: 15px;
+}
+
+.service-card p {
+  padding: 0 15px 20px 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.service-card button {
+  margin: 0 15px 15px 15px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.service-card button:hover {
+  background-color: #333;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+  }
+}
+
+
+/* Sección Equipos de Sonido en Madrid */
+/* Sección Equipos de Sonido */
+.sound-equipment-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.text-content {
+  width: 50%;
+  padding-right: 20px;
+  margin-left: 30px; /* Añadido margen a la izquierda */
+}
+
+.text-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #8e2397; /* Color morado para h2 */
+}
+
+.text-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #75B1C0; /* Color azul para h3 */
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.text-content p strong {
+  font-weight: bold;
+}
+
+.cta-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 35%; /* Ajusta este valor para centrar más el botón */
+
+}
+
+.cta-button:hover {
+  background-color: #cc0000;
+}
+
+.image-content {
+  width: 45%;
+}
+
+.image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 1024px) {
+  .text-content, .image-content {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+    margin-left: 0; /* Elimina el margen izquierdo en pantallas pequeñas */
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .cta-button {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+
+/* Sección de Alquiler de Equipos de Sonido */
+.company-heading {
+  background: linear-gradient(to right, black, #20033B, black) !important; /* Degradado hacia los lados */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.company-heading .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.company-heading h1 {
+  font-size: 3.5rem;
+  font-weight: lighter;
+  margin-bottom: 2px;
+  background: linear-gradient(to right, black, #8e2397, black); /* Degradado */
+  -webkit-background-clip: text; /* Para que el fondo se vea a través del texto */
+  color: transparent; /* Hacer el texto transparente para que solo se vea el fondo */
+}
+.company-heading h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #75B1C0;
+}
+
+.company-heading h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: black;
+  margin: 10px auto;
+}
+
+.company-heading p {
+  font-size: 1.3rem;
+  color: #ffffff; /* Color del texto */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .company-heading h2 {
+    font-size: 2rem;
+  }
+
+  .company-heading p {
+    font-size: 1rem;
+  }
+}
+
+

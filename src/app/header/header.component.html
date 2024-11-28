@@ -1,0 +1,30 @@
+<header>
+  <div class="container">
+    <div class="logo-container">
+      <a routerLink="/">
+        <img src="assets/logoSinFondo.png" alt="Logo">
+      </a>
+    </div>
+    <nav>
+      <button class="menu-toggle" (click)="toggleMenu()" aria-label="Toggle menu">&#9776;</button>
+      <ul class="menu">
+        <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="handleMenuClick()">Inicio</a></li>
+        
+        <li class="has-dropdown" routerLinkActive="active">
+          <a (click)="$event.preventDefault()" style="cursor: pointer;">GRUPO EMPRESARIAL</a>
+          <ul class="dropdown">
+            <li><a routerLink="/sonido" routerLinkActive="active" (click)="handleMenuClick()">SONIDO, ILUMINACION Y VIDEO</a></li>
+            <li><a routerLink="/eventos" routerLinkActive="active" (click)="handleMenuClick()">PRODUCCIÓN DE EVENTOS</a></li>
+            <li><a routerLink="/bodas" routerLinkActive="active" (click)="handleMenuClick()">BODAS</a></li>
+            <li><a routerLink="/camaras" routerLinkActive="active" (click)="handleMenuClick()">CÁMARAS</a></li>
+            <li><a routerLink="/navidad" routerLinkActive="active" (click)="handleMenuClick()">ILUMINACIÓN NAVIDAD</a></li>
+          </ul>
+        </li>
+      
+        <li><a routerLink="/sobre-nosotros" routerLinkActive="active" (click)="handleMenuClick()">SOBRE NOSOTROS</a></li>
+        <li><a routerLink="/trabajo" routerLinkActive="active" (click)="handleMenuClick()">NUESTRO TRABAJO</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active" (click)="handleMenuClick()">CONTACTO</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

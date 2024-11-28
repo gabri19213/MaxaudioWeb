@@ -1,0 +1,93 @@
+<!-- Información de contacto -->
+<section class="contact-section">
+    <img src="../../assets/contacto.jpg" alt="Contacto" class="contact-img">
+    <div class="contact-container">
+        <h1>NAVALMORAL DE LA MATA</h1>
+        <h2>SEDE ÚNICA</h2>
+
+
+        <p class="texto-descripcion">Maxaudio sonido e iluminación te ofrece la posibilidad de una experiencia única,
+            por lo que si tienes alguna duda sobre nuestros servicios o deseas solicitar presupuesto no dudes en
+            contactar con nosotros.</p>
+
+        <div class="contact-details">
+            <div class="contact-item">
+                <div class="circle-background">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <p class="subLogos">Ctra. Jarandilla, 10300 Navalmoral de la Mata, Cáceres</p>
+            </div>
+            <div class="contact-item">
+                <a href="mailto:maxaudio@hotmail.com" class="circle-background" title="Enviar un correo">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <p class="subLogos"><a href="mailto:maxaudio@hotmail.com"
+                        class="email-link">maxaudio&#64;hotmail.com</a></p>
+            </div>
+            <div class="contact-item">
+                <a href="https://wa.me/34605242385" target="_blank" class="circle-background" title="Abrir WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <p class="subLogos">Tlf +34 605 24 23 85</p>
+            </div>
+        </div>
+
+
+        <iframe class="mapita"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.7208784270733!2d-5.55015722419943!3d39.9028811715269!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3fd84b395a6edf%3A0xf02b18d8477509e0!2sMaxaudio!5e0!3m2!1ses!2ses!4v1727717231377!5m2!1ses!2ses"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section>
+
+<div class="contact-page">
+    <!-- Sección izquierda con detalles -->
+    <div class="contact-left">
+        <img src="/assets/logoSinFondo.png" alt="Imagen de contacto" />
+        <ul class="contact-details">
+            <li>
+                <i class="fas fa-phone"></i>
+                <span>+34 605 24 23 85</span>
+            </li>
+            <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Ctra. Jarandilla, 10300 Navalmoral de la Mata</span>
+            </li>
+            <li>
+                <i class="fas fa-calendar-alt"></i>
+                <span>
+                    Lunes a Jueves de 8:00 a 14:00 y de 16:00 a 18:30 hs.<br />
+                    Viernes de 8:00 a 14:00
+                </span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Sección derecha con el formulario -->
+<!-- Sección derecha con el formulario -->
+<div class="contact-right" id="contact-form">
+  <h2>Contacto</h2>
+  <p>
+    Descríbanos en el campo «Mensaje» aquello por lo que está interesado, nuestro
+    equipo de soporte lo derivará al especialista adecuado. Estaremos encantados
+    de ofrecerle alguna de nuestras soluciones.
+  </p>
+  <form action="https://formspree.io/f/xovqnzey" method="POST" (submit)="onSubmit($event)">
+    <div class="form-group">
+      <input type="text" placeholder="Nombre" [(ngModel)]="name" name="name" required />
+      <input type="text" placeholder="Teléfono" [(ngModel)]="phone" name="phone" required />
+    </div>
+    <input type="email" placeholder="Email" [(ngModel)]="email" name="email" required />
+    <textarea placeholder="Mensaje" [(ngModel)]="message" name="message" required></textarea>
+    <div class="form-checkbox">
+      <input type="checkbox" id="privacy" [(ngModel)]="acceptPrivacy" name="acceptPrivacy" required />
+      <label for="privacy">
+        Acepto las <button class="link-button" (click)="goToPage('politica')">Políticas de Privacidad</button>
+      </label>
+    </div>
+    <button type="submit" class="submit-btn">➔ Contactar</button>
+  </form>
+  <p class="privacy-note">
+    Al enviar un formulario se solicitan datos como tu correo y nombre que se almacenan en
+    una cookie para que no tengas que volver a escribirlos.
+  </p>
+</div>

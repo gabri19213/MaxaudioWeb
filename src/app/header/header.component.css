@@ -1,0 +1,228 @@
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px; /* Ajusta según la altura del header */
+  background-color: rgba(0, 0, 0, 0.705);
+  z-index: 10;
+  box-sizing: border-box;
+}
+
+/* Contenedor principal del header */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+}
+
+/* Logo alineado al borde izquierdo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  max-height: 60px; /* Limita la altura máxima del logo */
+  width: auto;
+  height: auto;
+}
+
+/* Menú de navegación para pantallas grandes */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav li {
+  margin-left: 30px;
+  white-space: nowrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: rgba(142, 35, 151, 255); /* Color en hover */
+}
+
+/* Menú responsive en pantallas pequeñas */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  nav ul {
+    display: none;
+    position: absolute;
+    top: 70px; /* Ajusta para que no cubra el header */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    padding: 0;
+    z-index: 9;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav li {
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    margin: 0;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+}
+
+/* Botón de menú para pantallas pequeñas */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* Dropdown Menu */
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.has-dropdown:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  width: 100%;
+}
+
+.dropdown li a {
+  padding: 10px 15px;
+  text-align: left;
+  color: #fff;
+}
+
+.dropdown li a:hover {
+  background-color: #444;
+  color: rgba(142, 35, 151, 255);
+}
+
+/* Estilos generales */
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  position: relative;
+  padding: 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.menu li a:hover {
+  color: rgba(142, 35, 151, 255);
+}
+
+/* Estilos para la página activa */
+.menu li a.active,
+.has-dropdown a.active {
+  color: rgba(142, 35, 151, 255);
+  font-weight: bold;
+  border-bottom: 2px solid rgba(142, 35, 151, 255);
+}
+
+.has-dropdown.active > a {
+  color: rgba(142, 35, 151, 255);
+  border-bottom: 2px solid rgba(142, 35, 151, 255);
+}
+
+/* Transiciones suaves */
+.dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.has-dropdown:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  display: block;
+}
+@media (max-width: 768px) {
+  /* Asegura que el menú desplegable no se salga del menú móvil */
+  .dropdown {
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  nav ul.active .dropdown {
+    display: block;
+  }
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  list-style: none;
+  min-width: 200px; /* Asegura que el dropdown no sobresalga */
+  overflow: hidden;
+  z-index: 10;
+}

@@ -1,0 +1,297 @@
+/* General */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background-color: #000; /* Fondo negro */
+}
+
+/* Contact Section */
+.contact-section {
+  padding: 0;
+  margin: 0;
+  background-color: #111;
+  text-align: center;
+}
+
+.contact-img {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+.contact-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 10px;
+  color: rgba(142, 35, 151, 255);
+  margin-left: 10%;
+  margin-top: 4%;
+}
+
+.contact-container h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #6cb7b0;
+  text-align: left;
+  margin-left: 10%;
+}
+
+.contact-container p {
+  color: #cacaca;
+  text-align: center;
+  padding: 0 10%;
+}
+
+.texto-descripcion {
+  margin-bottom: 30px;
+}
+
+/* Contact Details */
+.contact-details {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.contact-item {
+  text-align: center;
+  margin: 20px;
+  max-width: 250px;
+}
+
+.contact-item i {
+  font-size: 2rem;
+  color: #fff; /* Iconos blancos */
+}
+
+.circle-background {
+  width: 65px;
+  height: 65px;
+  background-color: #6cb7b0; /* Fondo verde azulado */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.contact-item p {
+  margin-top: 10px;
+}
+
+.subLogos {
+  font-size: 1.2rem;
+  color: #6f2376;
+  margin: 15px 0;
+  text-align: left;
+}
+
+/* Enlaces de contacto */
+.email-link {
+  color: inherit; /* Hereda el color del texto */
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  color: #ffcc00; /* Amarillo al pasar el mouse */
+}
+
+/* Efecto hover en iconos */
+.contact-item a.circle-background:hover {
+  background-color: #ffcc00; /* Fondo amarillo */
+  transition: background-color 0.3s ease;
+}
+/* Enlaces de los iconos */
+.contact-item a {
+  text-decoration: none; /* Elimina el subrayado */
+  color: inherit; /* Asegura que hereden el color definido */
+}
+
+.contact-item a:hover {
+  text-decoration: none; /* Asegura que no vuelva el subrayado al pasar el mouse */
+  color: #ffcc00; /* Cambia el color al pasar el mouse */
+}
+
+/* Mapa */
+.mapita {
+  width: 80%;
+  height: 50vh;
+  margin-bottom: 15vh;
+  border: 0;
+}
+
+/* Responsividad Contact Section */
+@media (max-width: 768px) {
+  .mapita {
+      width: 100%;
+      height: 40vh;
+  }
+
+  .contact-details {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+/* Contact Page */
+.contact-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #000; /* Fondo negro */
+}
+
+.contact-left,
+.contact-right {
+  flex: 1 1 calc(50% - 20px);
+  margin: 10px;
+}
+
+.contact-left img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.contact-left .contact-details {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.contact-left .contact-details li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.contact-left .contact-details i {
+  font-size: 24px;
+  margin-right: 10px;
+  color: #8e2397; /* Color personalizado */
+}
+
+/* Contact Form */
+.contact-right {
+  padding: 20px;
+  background-color: #111;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contact-right h2 {
+  margin-bottom: 20px;
+}
+
+.contact-right p {
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+}
+
+form textarea {
+  resize: none;
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.form-checkbox label {
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 20px;
+}
+
+.submit-btn {
+  background-color: #8e2397;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 2vh;
+}
+
+.submit-btn:hover {
+  background-color: #702070;
+}
+
+.privacy-note {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+/* Responsividad Contact Page */
+@media (max-width: 768px) {
+  .contact-page {
+      flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+      flex: 1 1 100%;
+  }
+
+  .form-group {
+      flex-direction: column;
+  }
+}
+
+.link-button {
+  background: none; /* Sin fondo */
+  border: none; /* Sin borde */
+  color: #8e2397; /* Mismo color que el enlace */
+  text-decoration: underline; /* Subrayar el texto */
+  cursor: pointer; /* Cambiar el cursor a mano */
+  font-size: inherit; /* Mantener el tamaño de fuente del texto circundante */
+  font-family: inherit; /* Heredar la tipografía */
+  padding: 0; /* Sin relleno */
+}
+
+.link-button:hover {
+  color: #6cb7b0; /* Cambiar el color al pasar el mouse */
+  text-decoration: none; /* Quitar el subrayado al pasar el mouse */
+}

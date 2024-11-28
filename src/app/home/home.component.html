@@ -1,0 +1,124 @@
+<div class="home-container">
+  <!-- Imagen destacada al inicio -->
+  <div class="carousel">
+    <div class="carousel-slide" *ngFor="let slide of slides; let i = index" [class.active]="i === currentIndex">
+      <img [src]="slide.image" alt="{{ slide.title }}">
+      <div class="carousel-text">
+        <h1>{{ slide.title }}</h1>
+        <p>{{ slide.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+<!-- Sección de Alquiler de Equipos de Sonido -->
+<section class="company-heading">
+  <div class="container">
+    <h1>Maxaudio</h1>
+    <h1>Producción de eventos</h1>
+    <h2>Expertos en sonido, iluminación y video profesional para todo tipo de eventos.</h2>
+  </div>
+</section>
+
+  <!-- Sección de Equipos de Sonido en extremadura -->
+  <section class="sound-equipment-section">
+    <div class="content-wrapper">
+      <div class="text-content">
+        <h2>Alquiler de Equipos de Sonido para Eventos</h2>
+        <h3>¡Transforma tu evento con un sonido impecable!</h3>
+        <p>
+          En <strong>Navalmoral de la Mata</strong>, nos especializamos en ofrecer <strong>equipos de sonido de alta calidad</strong> 
+          para todo tipo de eventos: bodas, conciertos, giras, festivales y más. Nuestro objetivo es garantizar que cada 
+          detalle sonoro de tu evento sea perfecto.
+        </p>
+        <p>
+          Sabemos que un fallo en el sonido puede arruinar momentos únicos. Por eso, contamos con <strong>profesionales con experiencia</strong> 
+          y equipos avanzados para asegurarnos de que no haya margen de error. Desde micrófonos hasta sistemas de sonido envolvente, 
+          tenemos todo lo que necesitas.
+        </p>
+        <p>
+          Además, gestionamos eventos como el reconocido festival <strong>SummerMax</strong>, demostrando nuestra experiencia y 
+          compromiso con el éxito. Confía en nosotros para una experiencia sonora inolvidable.
+        </p>
+        <p>
+          <strong>¿Listo para llevar tu evento al siguiente nivel?</strong> 
+          Llámanos ahora para pedir tu presupuesto sin compromiso. ¡Hacemos que tu tranquilidad y éxito sean nuestra prioridad!
+        </p>
+        <p><strong>Teléfono: 927 53 58 90 | Móvil: 605 24 23 85</strong></p>
+        <button (click)="goToPage('contact')" class="cta-button">Solicitar presupuesto</button>
+      </div>
+      <div class="image-content">
+        <img src="assets/Eventos/2.jpg" alt="Equipos de sonido para eventos en Extremadura">
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <!-- Sección de Servicios - Sonido e iluminación -->
+<section class="service-section">
+  <h2>Sonido e iluminación</h2>
+  <p>Más de 10 años de experiencia y profesionalidad en el sector</p>
+  
+  <div class="service-cards">
+    <div class="service-card">
+      <img src="assets/max.jpg" alt="Equipos de sonido">
+      <h3>Equipos de sonido</h3>
+      <p>Somos el equipo ideal para sonorizar tu evento  y que ese día todo funcione a la perfección.</p>
+      <button (click)="goToPage('sonido')">Más información</button>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/Recursos/tarjetaHome.jpg" alt="Estructuras y escenarios">
+      <h3>Estructuras y escenarios</h3>
+      <p>Alquiler y montaje de estructuras para sonido e iluminación para organizar tu evento con el mejor precio garantizado.</p>
+      <button (click)="goToPage('trabajo')">Más información</button>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/Escenario/10.JPG" alt="Iluminación para eventos">
+      <h3>Iluminación para eventos</h3>
+      <p>Más de 10 años de experiencia nos avalan. Trabajamos con los mejores equipos de iluminación para que tu evento brille.</p>
+      <button (click)="goToPage('navidad')">Más información</button>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/Recursos/tarjetaHome2.jpg" alt="Organización de eventos">
+      <h3>Organización de eventos</h3>
+      <p>Gestión y organización de eventos de alto nivel. Deja en nuestras manos el éxito de tu evento.</p>
+      <button (click)="goToPage('eventos')">Más información</button>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Sección de Equipos de Sonido en extremadura -->
+  <section class="sound-equipment-section">
+    <div class="content-wrapper">
+      <div class="image-content">
+        <img src="assets/Escenario/10.JPG" alt="Iluminación profesional para eventos en Extremadura">
+      </div>
+      <div class="text-content">
+        <h2>Alquiler de Equipos de Iluminación</h2>
+        <h3>¡Haz que tu evento brille como nunca!</h3>
+        <p>
+          Ofrecemos <strong>equipos de iluminación profesionales</strong> para bodas, conciertos, eventos corporativos, 
+          y celebraciones especiales en <strong>Navalmoral de la Mata</strong> y toda Extremadura. 
+          Desde efectos deslumbrantes hasta iluminación ambiental, creamos el ambiente perfecto para cada ocasión.
+        </p>
+        <p>
+          Nuestro equipo está compuesto por expertos en iluminación que entienden la importancia de cada detalle. 
+          Ya sea un festival como <strong>SummerMax</strong> o una cena de gala, adaptamos nuestras soluciones a tus necesidades.
+        </p>
+        <p>
+          También nos especializamos en <strong>iluminaciones navideñas</strong>, transformando espacios públicos y privados 
+          en experiencias visuales inolvidables. La confianza de nuestros clientes es el resultado de nuestro compromiso 
+          con la excelencia.
+        </p>
+      </div>
+    </div>
+  </section>
+  

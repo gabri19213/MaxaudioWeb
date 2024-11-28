@@ -1,1 +1,178 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reinicio de márgenes y paddings en todos los elementos */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-color: #000;
+    color: #fff;
+    
+}
+ section, .card, .carousel, .dropdown, .content {
+    background-color: #000 !important; /* Establece fondo negro en elementos comunes */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo base para body */
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; /* Heredar la tipografía */
+    line-height: 1.6;
+}
+
+/* Imágenes ajustadas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contenedores adaptables */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Responsividad básica */
+@media (min-width: 768px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 70%;
+    }
+}
+
+/* Tipografía adaptativa */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Ajustes de footer y header responsivos */
+footer, header {
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    footer, header {
+        padding: 10px;
+    }
+}
+
+/* Flexbox para carrusel responsivo */
+.carousel-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-text {
+    position: absolute;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.carousel-text h1 {
+    font-size: 3rem;
+}
+
+@media (max-width: 768px) {
+    .carousel-text h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Contenedor de los botones flotantes */
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000; /* Asegura que estén encima de otros elementos */
+  }
+  
+  /* Estilos comunes para los botones flotantes */
+  .floating-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #25d366; /* Color base (puede variar según el botón) */
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Botón de correo */
+  .email-button {
+    background-color: #3498db; /* Color para el botón de email */
+  }
+  
+  /* Botón de WhatsApp */
+  .whatsapp-button {
+    background-color: #25d366; /* Color de WhatsApp */
+  }
+  
+  /* Hover para ambos botones */
+  .floating-button:hover {
+    transform: scale(1.1);
+    background-color: #1c7430; /* Color de hover más oscuro */
+  }
+  
+  /* Ajustes en móviles */
+  @media (max-width: 768px) {
+    .floating-buttons {
+      bottom: 15px;
+      right: 15px;
+    }
+  
+    .floating-button {
+      width: 45px;
+      height: 45px;
+      font-size: 20px;
+    }
+  }
+  
