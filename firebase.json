@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "dist/max-audio-web-page",
     "ignore": [
       "firebase.json",
       "**/.*",
